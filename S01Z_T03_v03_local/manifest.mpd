@@ -1,0 +1,96 @@
+<!--xml version="1.0" encoding="utf-8"-->
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" minBufferTime="PT2S" patVersion="v1.8.4" mediaPresentationDuration="PT7.867S">
+    <Period id="0" start="PT0S">
+        <AdaptationSet id="0" contentType="audio" segmentAlignment="true">
+            <BaseURL>audio/</BaseURL>
+            <Representation id="0" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="220500" audioSamplingRate="44100">
+                <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="1"/>
+                <SegmentTemplate timescale="44100" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="1024">
+                    <SegmentTimeline>
+                        <S t="0" d="46079"/>
+                        <S d="44031" r="5"/>
+                        <S d="36201"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+        </AdaptationSet>
+        <AdaptationSet id="0" contentType="video" segmentAlignment="true">
+            <BaseURL>video/</BaseURL>
+            <Representation id="512-30fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="13680000" width="512" height="520" framerate="30/1">
+                <BaseURL>512-30fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="75000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="1024-30fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="31680000" width="1024" height="1040" framerate="30/1">
+                <BaseURL>1024-30fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="75000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="2048-30fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="61830000" width="2048" height="2080" framerate="30/1">
+                <BaseURL>2048-30fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="75000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="512-15fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="9000000" width="512" height="520" framerate="15/1">
+                <BaseURL>512-15fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="78000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="1024-15fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="21240000" width="1024" height="1040" framerate="15/1">
+                <BaseURL>1024-15fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="78000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="2048-15fps" mimeType="video/mp4" codecs="avc1.4d4032" bandwidth="44370000" width="2048" height="2080" framerate="15/1">
+                <BaseURL>2048-15fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="78000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+        </AdaptationSet>
+        <AdaptationSet id="0" contentType="mesh" segmentAlignment="true">
+            <BaseURL>mesh/</BaseURL>
+            <Representation id="30fps" mimeType="mesh/mp4" codecs="draco.514" bandwidth="18180000" framerate="30/1">
+                <BaseURL>30fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="75000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+            <Representation id="15fps" mimeType="mesh/mp4" codecs="draco.514" bandwidth="9270000" framerate="15/1">
+                <BaseURL>15fps/</BaseURL>
+                <SegmentTemplate timescale="90000" initialization="init.mp4" media="$Number%04d$.m4s" startNumber="0" presentationTimeOffset="0">
+                    <SegmentTimeline>
+                        <S t="0" d="89999" r="6"/>
+                        <S d="78000"/>
+                    </SegmentTimeline>
+                </SegmentTemplate>
+            </Representation>
+        </AdaptationSet>
+    </Period>
+</MPD>
